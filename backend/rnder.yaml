@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mnist-api
+    runtime: python
+    region: singapore       #to try: oregon, frankfurt
+    plan: free
+
+    buildCommand: pip install -r requirements.txt && python train.py
+
+    # $PORT is injected by Render automatically — never hardcode 8000 in production.
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: FRONTEND_URL
+        value: https://your-app.netlify.app   
