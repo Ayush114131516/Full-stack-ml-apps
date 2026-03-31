@@ -1,17 +1,3 @@
-"""
-train.py  —  Train a small CNN on MNIST, then save it.
-
-Run once before starting the server:
-    python train.py
-
-What it does:
-  1. Downloads MNIST automatically via Keras (60k train / 10k test images).
-  2. Builds a tiny Convolutional Neural Network (CNN).
-  3. Trains for 5 epochs (~2 min on CPU, ~30 sec on GPU).
-  4. Saves the trained model as  mnist_model.h5
-     (FastAPI will load this file at startup).
-"""
-
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
