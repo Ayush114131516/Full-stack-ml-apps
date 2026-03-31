@@ -71,7 +71,7 @@ history = model.fit(
     x_train,
     y_train,
     batch_size=128,
-    epochs=5,
+    epochs=15,
     validation_split=0.1,
     verbose=1,
 )
